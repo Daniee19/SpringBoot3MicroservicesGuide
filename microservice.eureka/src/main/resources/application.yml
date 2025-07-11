@@ -1,0 +1,19 @@
+server:
+  port: 8761 #puerto por defecto de eureka
+
+spring:
+  application:
+    name: msvc-eureka
+  config:
+    #Para que no de errores no es el configserver verdadero solo es para evitar errores
+    import: optional:configserver:http://localhost:8888
+#Servidor de eureka
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    #Con esta configuración funcionará el servidor de eureka
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/
