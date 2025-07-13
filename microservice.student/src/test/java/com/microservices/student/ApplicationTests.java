@@ -1,4 +1,4 @@
-package com.microservices.student.microservice.student;
+package com.microservices.student;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
